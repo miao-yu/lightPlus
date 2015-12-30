@@ -1,0 +1,15 @@
+<div class="header-align">
+  <div class="alignleft">
+    <h1><a href="<%- config.root %>"><font color="#258fb8">M</font>iao <font color="#258fb8">Yu</font><font style="font-size: 30px;">'s</font> <font color="#258fb8">Lab</font></a></h1>
+    <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
+  </div>
+  <nav id="main-nav" class="alignright">
+    <ul>
+      <% for (var i in theme.menu){ %>
+        <li><a href="<%- theme.menu[i]['url'] %>"><% if (theme.menu[i]['icon']) { %><i class="fa fa-<%= theme.menu[i]['icon'] %>"></i><% } %><%= theme.menu[i]['title'] %></a></li>
+      <% } %>
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+</div>
+<div class="clearfix"></div>

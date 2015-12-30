@@ -1,0 +1,49 @@
+menu:
+  home:
+    title: Home
+    url: /
+    icon: home
+  aboutme:
+    title: About Me
+    url: /cv/
+    icon: info-circle
+  archives:
+    title: Archives
+    url: /archives/
+    icon: archive
+  rss:
+    title: RSS
+    url: /atom.xml
+    icon: rss
+
+widgets:
+- category
+- tag
+
+excerpt_link: Read More
+
+twitter:
+  username:
+  show_replies: false
+  tweet_count: 5
+
+addthis:
+  enable: true
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+google_analytics: UA-71575243-1
+rss:
+
+comment_provider: disqus
+# Facebook comment
+facebook:
+  appid: 123456789012345
+  comment_count: 5
+  comment_width: 840
+  comment_colorscheme: light

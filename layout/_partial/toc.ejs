@@ -1,0 +1,13 @@
+<div id="toc" class="toc-article">
+    <h3 class="toc-title">Table of Contents</h3>
+    <%- toc(item.content) %>
+</div>
+<script type="text/javascript">
+  $(function() {
+    $('.toc-link').click(function() {
+      var href = $(this).attr('href');
+      $(window).scrollTop($(href).offset().top - 168);
+      return false;
+    });
+  });
+</script>

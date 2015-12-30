@@ -1,0 +1,7 @@
+<%- partial('search.ejs') %>
+<% if (item.layout == 'page' || item.layout == 'post'){ %>
+  <%- partial('toc.ejs', {item: page, index: false}) %>
+<% } %>
+<% theme.widgets.forEach(function(widget){ %>
+  <%- partial('../_widget/' + widget) %>
+<% }); %>
