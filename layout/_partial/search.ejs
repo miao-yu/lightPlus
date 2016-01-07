@@ -1,6 +1,20 @@
-<div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="<%= __('search') %>">
-    <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
-  </form>
-</div>
+<% if (theme.search_provider == "google") { %>
+  <div class="search">
+    <form action="" method="get" accept-charset="utf-8">
+      <input type="search" name="q" results="0" placeholder="<%= __('search') %>">
+      <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
+    </form>
+  </div>
+<% } else if(theme.search_provider == "swiftype") { %>
+  <div class="search search-fixed">
+    <input type="search" placeholder="<%= __('search') %>" class="st-default-search-input">
+  </div>
+  <script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+    _st('install','AV5zaxaFQs2GgoAcekdJ','2.0.0');
+  </script>
+<% } %>
